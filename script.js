@@ -1,15 +1,13 @@
 const prizes = [
-
-1:"💸 ₹25",
-2:"💸 ₹500 🥳",
-3:"💸 #100",
-4:"💸 ₹150",
-5:"💸 ₹200",
-6:"💸 ₹50",
-7:"₹0 😭",
-8:"💸 ₹250 🎉",
-9:"💸 ₹10"
-
+"❤️ Give Mom a hug!",
+"🍫 You win a chocolate!",
+"☕ Make tea for your family!",
+"📸 Take a family selfie!",
+"🍕 Pizza treat for everyone!",
+"😂 Tell a funny joke!",
+"🎬 Family movie night!",
+"🎁 You get a surprise gift!",
+"⭐ You are the lucky winner today!"
 ];
 
 
@@ -18,7 +16,6 @@ let lastPrize = -1;
 
 function playGame(number){
 
-
 document.getElementById("number").innerHTML =
 "Opening Tip Top... ⏳";
 
@@ -26,18 +23,18 @@ document.getElementById("number").innerHTML =
 setTimeout(function(){
 
 
-let randomPrize;
+let prize;
 
 
 do{
 
-randomPrize = Math.floor(Math.random()*prizes.length);
+prize = Math.floor(Math.random()*prizes.length);
 
 }
-while(randomPrize === lastPrize);
+while(prize === lastPrize);
 
 
-lastPrize = randomPrize;
+lastPrize = prize;
 
 
 document.getElementById("number").innerHTML =
@@ -45,7 +42,7 @@ document.getElementById("number").innerHTML =
 
 
 document.getElementById("result").innerHTML =
-prizes[randomPrize];
+prizes[prize];
 
 
 },1000);
