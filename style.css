@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    margin: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #ffcc00;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#tiptop {
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.left, .right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+.left {
+    background: #ff4d4d;
+}
+
+.right {
+    background: #4d79ff;
+}
+
+.open {
+    transform: rotate(10deg) scale(1.1);
+}
+
+#message {
+    color: #e91e63;
+    margin-top: 20px;
+}
