@@ -1,58 +1,51 @@
-body{
-    font-family: Arial;
-    background:#a8edea;
+body {
     text-align:center;
-    padding:20px;
+    font-family:Arial;
+    background:#f1f1f1;
 }
 
-
-.container{
-    background:white;
-    max-width:400px;
-    margin:auto;
-    padding:25px;
-    border-radius:20px;
+.game {
+    margin-top:50px;
 }
 
-
-.game{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
+#wheel {
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    border:8px solid black;
+    margin:30px auto;
+    position:relative;
+    background:conic-gradient(
+    #ff5252 0deg 40deg,
+    #4caf50 40deg 80deg,
+    #2196f3 80deg 120deg,
+    #ffc107 120deg 160deg,
+    #9c27b0 160deg 200deg,
+    #00bcd4 200deg 240deg,
+    #ff9800 240deg 280deg,
+    #795548 280deg 320deg,
+    #607d8b 320deg 360deg);
+    transition:5s;
 }
 
-
-.box{
-    height:80px;
-    border:none;
-    border-radius:15px;
-    color:white;
+.number {
+    position:absolute;
     font-size:30px;
     font-weight:bold;
+}
+
+.n1 {top:20px; left:135px;}
+.n2 {top:45px; right:55px;}
+.n3 {top:120px; right:20px;}
+.n4 {bottom:60px; right:45px;}
+.n5 {bottom:20px; left:135px;}
+.n6 {bottom:60px; left:45px;}
+.n7 {top:120px; left:20px;}
+.n8 {top:45px; left:55px;}
+.n9 {top:135px; left:135px;}
+
+button {
+    padding:15px 40px;
+    font-size:25px;
     cursor:pointer;
-}
-
-
-.red{
-    background:#ff4757;
-}
-
-
-.blue{
-    background:#1e90ff;
-}
-
-
-.green{
-    background:#2ed573;
-}
-
-
-.yellow{
-    background:#ffa502;
-}
-
-
-#result{
-    color:#e91e63;
 }
