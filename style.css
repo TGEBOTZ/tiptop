@@ -1,46 +1,76 @@
-let selectedColor = "";
+body{
+    font-family:Arial;
+    background:#a8edea;
+    text-align:center;
+}
 
-const prizes = {
-    1: "❤️ Give Mom a hug!",
-    2: "🍫 You win a chocolate!",
-    3: "☕ Make tea for your family!",
-    4: "📸 Take a family selfie!",
-    5: "🍕 Pizza treat for everyone!",
-    6: "😂 Tell a funny joke!",
-    7: "🎬 Family movie night!",
-    8: "🎁 You get a surprise gift!",
-    9: "⭐ You are the lucky winner today!"
-};
-
-
-function choose(color) {
-    selectedColor = color;
-
-    document.getElementById("numbers").style.display = "block";
-
-    document.getElementById("message").innerHTML =
-        "You selected " + color + ". Choose a number!";
+.container{
+    background:white;
+    max-width:450px;
+    margin:30px auto;
+    padding:25px;
+    border-radius:20px;
 }
 
 
-function result(number) {
-
-    document.getElementById("message").innerHTML =
-        "🎉 Opening Tip Top...";
-
-    setTimeout(function(){
-
-        document.getElementById("message").innerHTML =
-            prizes[number];
-
-    }, 1000);
+button{
+    padding:12px;
+    margin:5px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
 }
 
 
-function openTip() {
+#tiptop{
+    width:220px;
+    height:220px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    transition:1s;
+}
 
-    let tip = document.getElementById("tiptop");
 
-    tip.classList.toggle("open");
+.part{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    color:white;
+    background:#ff4d6d;
+    border:2px solid white;
+}
 
-    }
+
+.one{
+    background:#ff4757;
+}
+
+.two{
+    background:#1e90ff;
+}
+
+.three{
+    background:#2ed573;
+}
+
+.four{
+    background:#ffa502;
+}
+
+
+.open{
+    transform:rotate(15deg) scale(1.1);
+}
+
+
+.hide{
+    display:none;
+}
+
+
+#result{
+    color:#e91e63;
+}
