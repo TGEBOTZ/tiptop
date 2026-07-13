@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Family Tip Top</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<title>Family Tip Top</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,39 +15,29 @@
 <p>Choose a color</p>
 
 <div class="colors">
-<button onclick="chooseColor('Red')">🔴 Red</button>
-<button onclick="chooseColor('Blue')">🔵 Blue</button>
-<button onclick="chooseColor('Green')">🟢 Green</button>
-<button onclick="chooseColor('Yellow')">🟡 Yellow</button>
+<button onclick="playGame('Red')">🔴 Red</button>
+<button onclick="playGame('Blue')">🔵 Blue</button>
+<button onclick="playGame('Green')">🟢 Green</button>
+<button onclick="playGame('Yellow')">🟡 Yellow</button>
 </div>
 
 
-<div id="tiptop" onclick="openTip()">
-    <div class="part one">?</div>
-    <div class="part two">?</div>
-    <div class="part three">?</div>
-    <div class="part four">?</div>
-</div>
+<div id="tiptop">
 
-
-<div id="numbers" class="hide">
-
-<p>Choose a number</p>
-
-<button onclick="showPrize(1)">1</button>
-<button onclick="showPrize(2)">2</button>
-<button onclick="showPrize(3)">3</button>
-<button onclick="showPrize(4)">4</button>
-<button onclick="showPrize(5)">5</button>
-<button onclick="showPrize(6)">6</button>
-<button onclick="showPrize(7)">7</button>
-<button onclick="showPrize(8)">8</button>
-<button onclick="showPrize(9)">9</button>
+<div class="part one">?</div>
+<div class="part two">?</div>
+<div class="part three">?</div>
+<div class="part four">?</div>
 
 </div>
 
+
+<h2 id="number"></h2>
 
 <h2 id="result"></h2>
+
+
+<button id="restart" onclick="resetGame()">🔄 Play Again</button>
 
 
 </div>
