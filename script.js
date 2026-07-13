@@ -1,24 +1,32 @@
-if (localStorage.getItem("played") === "yes") {
-    document.getElementById("msg").innerHTML =
-    "You already played this game!";
-    
-    document.querySelectorAll("button").forEach(btn => {
-        btn.disabled = true;
-    });
-}
+const prizes = [
+"Gift A",
+"Gift B",
+"Gift C",
+"Gift D",
+"Gift E",
+"Gift F",
+"Gift G",
+"Gift H",
+"Gift I"
+];
 
-function play(number) {
+let angle = 0;
 
-    if(localStorage.getItem("played") === "yes"){
-        return;
-    }
+function spin(){
 
-    localStorage.setItem("played","yes");
+    let random = Math.floor(Math.random()*360)+720;
 
-    document.getElementById("msg").innerHTML =
-    "Your selected number is: " + number;
+    angle += random;
 
-    document.querySelectorAll("button").forEach(btn => {
-        btn.disabled = true;
-    });
+    document.getElementById("wheel").style.transform =
+    "rotate(" + angle + "deg)";
+
+    setTimeout(function(){
+
+        let prize = prizes[Math.floor(Math.random()*prizes.length)];
+
+        document.getElementById("msg").innerHTML =
+        "🎁 You Won: " + prize;
+
+    },5000);
 }
