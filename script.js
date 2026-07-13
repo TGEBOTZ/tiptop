@@ -1,32 +1,36 @@
 const prizes = [
-"Gift A",
-"Gift B",
-"Gift C",
-"Gift D",
-"Gift E",
-"Gift F",
-"Gift G",
-"Gift H",
-"Gift I"
+    "Gift A",
+    "Gift B",
+    "Gift C",
+    "Gift D",
+    "Gift E",
+    "Gift F",
+    "Gift G",
+    "Gift H",
+    "Gift I"
 ];
 
-let angle = 0;
 
-function spin(){
+function play(number){
 
-    let random = Math.floor(Math.random()*360)+720;
+    let box = event.target;
 
-    angle += random;
+    box.style.animation="shake 0.5s";
 
-    document.getElementById("wheel").style.transform =
-    "rotate(" + angle + "deg)";
+
+    let randomPrize =
+    prizes[Math.floor(Math.random()*prizes.length)];
+
 
     setTimeout(function(){
 
-        let prize = prizes[Math.floor(Math.random()*prizes.length)];
-
         document.getElementById("msg").innerHTML =
-        "🎁 You Won: " + prize;
+        "🎉 Your Number: " + number +
+        "<br>🎁 Prize: " + randomPrize;
 
-    },5000);
+
+        box.style.animation="";
+
+    },500);
+
 }
