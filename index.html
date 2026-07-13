@@ -10,40 +10,45 @@
 
 <div class="container">
 
-    <h1>🎉 Family Tip Top</h1>
-    <p>Choose a color</p>
+<h1>🎉 Family Tip Top</h1>
 
-    <div class="buttons">
-        <button onclick="choose('Red')">🔴 Red</button>
-        <button onclick="choose('Blue')">🔵 Blue</button>
-        <button onclick="choose('Green')">🟢 Green</button>
-        <button onclick="choose('Yellow')">🟡 Yellow</button>
-    </div>
+<p>Choose a color</p>
 
-
-    <div id="tiptop" onclick="openTip()">
-        <div class="left">?</div>
-        <div class="right">?</div>
-    </div>
+<div class="colors">
+<button onclick="chooseColor('Red')">🔴 Red</button>
+<button onclick="chooseColor('Blue')">🔵 Blue</button>
+<button onclick="chooseColor('Green')">🟢 Green</button>
+<button onclick="chooseColor('Yellow')">🟡 Yellow</button>
+</div>
 
 
-    <div id="numbers" style="display:none;">
-        <p>Choose a number</p>
-
-        <button onclick="result(1)">1</button>
-        <button onclick="result(2)">2</button>
-        <button onclick="result(3)">3</button>
-        <button onclick="result(4)">4</button>
-        <button onclick="result(5)">5</button>
-        <button onclick="result(6)">6</button>
-        <button onclick="result(7)">7</button>
-        <button onclick="result(8)">8</button>
-        <button onclick="result(9)">9</button>
-
-    </div>
+<div id="tiptop" onclick="openTip()">
+    <div class="part one">?</div>
+    <div class="part two">?</div>
+    <div class="part three">?</div>
+    <div class="part four">?</div>
+</div>
 
 
-    <h2 id="message"></h2>
+<div id="numbers" class="hide">
+
+<p>Choose a number</p>
+
+<button onclick="showPrize(1)">1</button>
+<button onclick="showPrize(2)">2</button>
+<button onclick="showPrize(3)">3</button>
+<button onclick="showPrize(4)">4</button>
+<button onclick="showPrize(5)">5</button>
+<button onclick="showPrize(6)">6</button>
+<button onclick="showPrize(7)">7</button>
+<button onclick="showPrize(8)">8</button>
+<button onclick="showPrize(9)">9</button>
+
+</div>
+
+
+<h2 id="result"></h2>
+
 
 </div>
 
