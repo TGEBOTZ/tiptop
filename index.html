@@ -14,36 +14,34 @@
 <p id="msg">Choose Your Lucky Number</p>
 
 <div class="numbers">
-
 <button onclick="play(1,this)">1</button>
 <button onclick="play(2,this)">2</button>
 <button onclick="play(3,this)">3</button>
-
 <button onclick="play(4,this)">4</button>
 <button onclick="play(5,this)">5</button>
 <button onclick="play(6,this)">6</button>
-
 <button onclick="play(7,this)">7</button>
 <button onclick="play(8,this)">8</button>
 <button onclick="play(9,this)">9</button>
-
 </div>
 
 </div>
 
 
 <div id="popup">
-<div class="box">
-<h2>🎉 Congratulations</h2>
-<p id="result"></p>
+<div class="popup-box">
+
+<h1>🎉 JACKPOT 🎉</h1>
+
+<p id="prize"></p>
+
 <button onclick="closePopup()">OK</button>
+
 </div>
 </div>
 
 
-<audio id="sound">
-<source src="click.mp3" type="audio/mpeg">
-</audio>
+<div id="confetti"></div>
 
 
 <script src="script.js"></script>
