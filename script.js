@@ -1,29 +1,46 @@
 let selectedColor = "";
 
-const messages = [
-    "❤️ Give Mom a hug!",
-    "☕ Dad makes tea today!",
-    "🍕 Brother buys pizza!",
-    "🎬 Family movie night!",
-    "📸 Take a family selfie!",
-    "😂 Tell everyone a joke!",
-    "🍫 You win a chocolate!",
-    "🎁 You are the lucky person today!"
-];
+const prizes = {
+    1: "❤️ Give Mom a hug!",
+    2: "🍫 You win a chocolate!",
+    3: "☕ Make tea for your family!",
+    4: "📸 Take a family selfie!",
+    5: "🍕 Pizza treat for everyone!",
+    6: "😂 Tell a funny joke!",
+    7: "🎬 Family movie night!",
+    8: "🎁 You get a surprise gift!",
+    9: "⭐ You are the lucky winner today!"
+};
+
 
 function choose(color) {
     selectedColor = color;
+
     document.getElementById("numbers").style.display = "block";
+
     document.getElementById("message").innerHTML =
-        "You selected " + color + ". Now choose a number!";
+        "You selected " + color + ". Choose a number!";
 }
 
-function result() {
-    let random = Math.floor(Math.random() * messages.length);
-    document.getElementById("message").innerHTML = messages[random];
+
+function result(number) {
+
+    document.getElementById("message").innerHTML =
+        "🎉 Opening Tip Top...";
+
+    setTimeout(function(){
+
+        document.getElementById("message").innerHTML =
+            prizes[number];
+
+    }, 1000);
 }
+
 
 function openTip() {
+
     let tip = document.getElementById("tiptop");
+
     tip.classList.toggle("open");
+
 }
