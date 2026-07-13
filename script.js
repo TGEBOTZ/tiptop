@@ -1,14 +1,14 @@
 let prizes = {
 
-1:"❤️ Give Mom a hug!",
-2:"🍫 You win a chocolate!",
-3:"☕ Make tea for family!",
-4:"📸 Take a family selfie!",
-5:"🍕 Pizza treat today!",
-6:"😂 Tell a funny joke!",
-7:"🎬 Family movie night!",
-8:"🎁 Surprise gift for you!",
-9:"⭐ Lucky winner today!"
+1:"25",
+2:"50",
+3:"0",
+4:"200",
+5:"10",
+6:"100",
+7:"350",
+8:"900",
+9:"500"
 
 };
 
