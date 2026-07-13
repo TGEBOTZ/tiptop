@@ -1,64 +1,69 @@
-let played = false;
+const prizes = {
+
+1:"❤️ Give Mom a hug!",
+2:"🍫 You win a chocolate!",
+3:"☕ Make tea for your family!",
+4:"📸 Take a family selfie!",
+5:"🍕 Pizza treat for everyone!",
+6:"😂 Tell a funny joke!",
+7:"🎬 Family movie night!",
+8:"🎁 You get a surprise gift!",
+9:"⭐ You are the lucky winner today!"
+
+};
 
 
-const prizes = [
-"❤️ Give Mom a hug!",
-"🍫 You win a chocolate!",
-"☕ Make tea for family!",
-"📸 Take a family selfie!",
-"🍕 Pizza treat today!",
-"😂 Tell a funny joke!",
-"🎬 Family movie night!",
-"🎁 Surprise gift for you!",
-"⭐ Lucky winner today!"
-];
+window.onload = function(){
 
+    if(localStorage.getItem("played")){
 
-function playGame(color){
+        document.getElementById("result").innerHTML =
+        "❌ You already played this game!";
 
-if(played){
-return;
-}
+        document.getElementById("tiptop").style.display="none";
 
+    }
 
-let number = Math.floor(Math.random()*9)+1;
-
-
-document.getElementById("number").innerHTML =
-"Opening Tip Top...";
-
-
-document.getElementById("tiptop")
-.classList.add("open");
-
-
-setTimeout(function(){
-
-document.getElementById("number").innerHTML =
-"Number: "+number;
-
-
-document.getElementById("result").innerHTML =
-prizes[number-1];
-
-
-},1000);
-
-
-played=true;
-
-}
+};
 
 
 
-function resetGame(){
+function playGame(number){
 
-played=false;
 
-document.getElementById("tiptop")
-.classList.remove("open");
+    if(localStorage.getItem("played")){
 
-document.getElementById("number").innerHTML="";
-document.getElementById("result").innerHTML="";
+        return;
+
+    }
+
+
+    document.getElementById("number").innerHTML =
+    "Opening Tip Top... ⏳";
+
+
+    setTimeout(function(){
+
+
+        document.getElementById("number").innerHTML =
+        "Your Number: " + number;
+
+
+        document.getElementById("result").innerHTML =
+        prizes[number];
+
+
+        localStorage.setItem("played","yes");
+
+
+        document.querySelectorAll(".box").forEach(function(btn){
+
+            btn.disabled=true;
+
+        });
+
+
+    },1000);
+
 
 }
