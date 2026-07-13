@@ -1,4 +1,4 @@
-const prizes = {
+const prizes = [
 
 1:"💸 ₹25",
 2:"💸 ₹500 🥳",
@@ -10,60 +10,45 @@ const prizes = {
 8:"💸 ₹250 🎉",
 9:"💸 ₹10"
 
-};
+];
 
 
-window.onload = function(){
-
-    if(localStorage.getItem("played")){
-
-        document.getElementById("result").innerHTML =
-        "❌ You already played this game!";
-
-        document.getElementById("tiptop").style.display="none";
-
-    }
-
-};
-
+let lastPrize = -1;
 
 
 function playGame(number){
 
 
-    if(localStorage.getItem("played")){
-
-        return;
-
-    }
+document.getElementById("number").innerHTML =
+"Opening Tip Top... ⏳";
 
 
-    document.getElementById("number").innerHTML =
-    "Opening Tip Top... ⏳";
+setTimeout(function(){
 
 
-    setTimeout(function(){
+let randomPrize;
 
 
-        document.getElementById("number").innerHTML =
-        "Your Number: " + number;
+do{
+
+randomPrize = Math.floor(Math.random()*prizes.length);
+
+}
+while(randomPrize === lastPrize);
 
 
-        document.getElementById("result").innerHTML =
-        prizes[number];
+lastPrize = randomPrize;
 
 
-        localStorage.setItem("played","yes");
+document.getElementById("number").innerHTML =
+"Your Number: " + number;
 
 
-        document.querySelectorAll(".box").forEach(function(btn){
-
-            btn.disabled=true;
-
-        });
+document.getElementById("result").innerHTML =
+prizes[randomPrize];
 
 
-    },1000);
+},1000);
 
 
 }
