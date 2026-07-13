@@ -1,92 +1,48 @@
-const prizes = {
+<!DOCTYPE html>
+<html>
+<head>
+<title>Family Tip Top</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-1:"❤️ Give Mom a hug!",
-2:"🍫 You win a chocolate!",
-3:"☕ Make tea for your family!",
-4:"📸 Take a family selfie!",
-5:"🍕 Pizza treat for everyone!",
-6:"😂 Tell a funny joke!",
-7:"🎬 Family movie night!",
-8:"🎁 You get a surprise gift!",
-9:"⭐ You are the lucky winner today!"
+<link rel="stylesheet" href="style.css">
 
-};
+</head>
 
+<body>
 
-const adminPassword = "1234";
+<div class="container">
 
+<h1>🎉 Family Tip Top</h1>
 
-window.onload = function(){
-
-    if(localStorage.getItem("played")){
-
-        document.getElementById("result").innerHTML =
-        "❌ You already played this game!";
-
-        document.getElementById("tiptop").style.display="none";
-
-    }
-
-};
+<p>Select a number</p>
 
 
-function playGame(number){
+<div id="tiptop">
 
-    if(localStorage.getItem("played")){
+<button onclick="playGame(1)" class="box red">1</button>
+<button onclick="playGame(2)" class="box blue">2</button>
+<button onclick="playGame(3)" class="box green">3</button>
+<button onclick="playGame(4)" class="box yellow">4</button>
 
-        return;
+<button onclick="playGame(5)" class="box blue">5</button>
+<button onclick="playGame(6)" class="box green">6</button>
+<button onclick="playGame(7)" class="box yellow">7</button>
+<button onclick="playGame(8)" class="box red">8</button>
 
-    }
+<button onclick="playGame(9)" class="box green">9</button>
 
-
-    document.getElementById("number").innerHTML =
-    "Opening Tip Top... ⏳";
-
-
-    setTimeout(function(){
-
-        document.getElementById("number").innerHTML =
-        "Your Number: " + number;
+</div>
 
 
-        document.getElementById("result").innerHTML =
-        prizes[number];
+<h2 id="number"></h2>
+
+<h2 id="result"></h2>
 
 
-        localStorage.setItem("played","yes");
+</div>
 
 
-        document.querySelectorAll(".box").forEach(function(btn){
-            btn.disabled=true;
-        });
+<script src="script.js"></script>
 
-
-    },1000);
-
-}
-
-
-
-function adminLogin(){
-
-let pass = prompt(""Enter Admin Password");
-
-
-if(pass === adminPassword){
-
-    localStorage.removeItem("played");
-
-    document.getElementById("result").innerHTML =
-    "✅ Admin access granted. Game reset!";
-
-    document.getElementById("tiptop").style.display="grid";
-
-
-}
-else{
-
-    alert("Wrong Password!");
-
-}
-
-}
+</body>
+</html>
