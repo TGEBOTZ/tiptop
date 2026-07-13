@@ -1,21 +1,21 @@
 const prizes = [
-    "Gift A",
-    "Gift B",
-    "Gift C",
-    "Gift D",
-    "Gift E",
-    "Gift F",
-    "Gift G",
-    "Gift H",
-    "Gift I"
+
+"Gift A",
+"Gift B",
+"Gift C",
+"Gift D",
+"Gift E",
+"Gift F",
+"Gift G",
+"Gift H",
+"Gift I"
+
 ];
 
 
-function play(number){
+function play(number,btn){
 
-    let box = event.target;
-
-    box.style.animation="shake 0.5s";
+    btn.classList.add("active");
 
 
     let randomPrize =
@@ -24,13 +24,17 @@ function play(number){
 
     setTimeout(function(){
 
+
         document.getElementById("msg").innerHTML =
-        "🎉 Your Number: " + number +
-        "<br>🎁 Prize: " + randomPrize;
+
+        "🎉 Your Number : " + number +
+        "<br>🎁 Prize : " + randomPrize;
 
 
-        box.style.animation="";
+        btn.classList.remove("active");
+
 
     },500);
+
 
 }
