@@ -1,49 +1,64 @@
-let prizes = {
-
-1:"25",
-2:"50",
-3:"0",
-4:"200",
-5:"10",
-6:"100",
-7:"350",
-8:"900",
-9:"500"
-
-};
+let played = false;
 
 
-function chooseColor(color){
+const prizes = [
+"❤️ Give Mom a hug!",
+"🍫 You win a chocolate!",
+"☕ Make tea for family!",
+"📸 Take a family selfie!",
+"🍕 Pizza treat today!",
+"😂 Tell a funny joke!",
+"🎬 Family movie night!",
+"🎁 Surprise gift for you!",
+"⭐ Lucky winner today!"
+];
 
-document.getElementById("numbers").classList.remove("hide");
 
-document.getElementById("result").innerHTML =
-"You selected "+color+" 🎨<br>Choose a number";
+function playGame(color){
 
+if(played){
+return;
 }
 
 
+let number = Math.floor(Math.random()*9)+1;
 
-function showPrize(number){
 
-document.getElementById("result").innerHTML =
-"Opening Tip Top... ⏳";
+document.getElementById("number").innerHTML =
+"Opening Tip Top...";
+
+
+document.getElementById("tiptop")
+.classList.add("open");
 
 
 setTimeout(function(){
 
+document.getElementById("number").innerHTML =
+"Number: "+number;
+
+
 document.getElementById("result").innerHTML =
-prizes[number];
+prizes[number-1];
+
 
 },1000);
+
+
+played=true;
 
 }
 
 
 
-function openTip(){
+function resetGame(){
+
+played=false;
 
 document.getElementById("tiptop")
-.classList.toggle("open");
+.classList.remove("open");
+
+document.getElementById("number").innerHTML="";
+document.getElementById("result").innerHTML="";
 
 }
