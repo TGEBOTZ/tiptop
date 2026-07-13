@@ -1,40 +1,50 @@
-const prizes = [
-
-"Gift A",
-"Gift B",
-"Gift C",
-"Gift D",
-"Gift E",
-"Gift F",
-"Gift G",
-"Gift H",
-"Gift I"
-
+const prizes=[
+"Free Lunch",
+"Coffee Voucher",
+"Gift Item",
+"Movie Ticket",
+"Mobile Recharge",
+"Chocolate Box",
+"Shopping Voucher",
+"Surprise Gift",
+"Better Luck Next Time"
 ];
 
 
 function play(number,btn){
 
-    btn.classList.add("active");
+btn.classList.add("active");
 
 
-    let randomPrize =
-    prizes[Math.floor(Math.random()*prizes.length)];
+let sound=document.getElementById("sound");
+sound.play();
 
 
-    setTimeout(function(){
+let prize=
+prizes[Math.floor(Math.random()*prizes.length)];
 
 
-        document.getElementById("msg").innerHTML =
+setTimeout(()=>{
 
-        "🎉 Your Number : " + number +
-        "<br>🎁 Prize : " + randomPrize;
-
-
-        btn.classList.remove("active");
+document.getElementById("result").innerHTML=
+"Your Number : "+number+
+"<br><br>🎁 Prize : "+prize;
 
 
-    },500);
+document.getElementById("popup").style.display="block";
 
+
+btn.classList.remove("active");
+
+
+},1000);
+
+}
+
+
+
+function closePopup(){
+
+document.getElementById("popup").style.display="none";
 
 }
