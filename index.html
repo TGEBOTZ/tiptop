@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tip Top Game</title>
-    <link rel="stylesheet" href="style.css">
+<title>Tip Top Game</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -11,7 +11,7 @@
 
 <h1>🎁 Tip Top Game</h1>
 
-<p id="msg">Choose your lucky number</p>
+<p id="msg">Choose Your Lucky Number</p>
 
 <div class="numbers">
 
@@ -30,6 +30,21 @@
 </div>
 
 </div>
+
+
+<div id="popup">
+<div class="box">
+<h2>🎉 Congratulations</h2>
+<p id="result"></p>
+<button onclick="closePopup()">OK</button>
+</div>
+</div>
+
+
+<audio id="sound">
+<source src="click.mp3" type="audio/mpeg">
+</audio>
+
 
 <script src="script.js"></script>
 
