@@ -1,43 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Family Tip Top</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <title>Tip Top Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
-
-<h1>🎉 Family Tip Top</h1>
-
-<p>Choose a number</p>
-
 <div class="game">
+    <h1>Tip Top Game</h1>
+    <p id="msg">Choose your lucky number</p>
 
-<button class="box red" onclick="playGame(1)">1</button>
-<button class="box blue" onclick="playGame(2)">2</button>
-<button class="box green" onclick="playGame(3)">3</button>
-
-<button class="box yellow" onclick="playGame(4)">4</button>
-<button class="box red" onclick="playGame(5)">5</button>
-<button class="box blue" onclick="playGame(6)">6</button>
-
-<button class="box green" onclick="playGame(7)">7</button>
-<button class="box yellow" onclick="playGame(8)">8</button>
-<button class="box red" onclick="playGame(9)">9</button>
-
+    <div class="numbers">
+        <button onclick="play(1)">1</button>
+        <button onclick="play(2)">2</button>
+        <button onclick="play(3)">3</button>
+        <button onclick="play(4)">4</button>
+        <button onclick="play(5)">5</button>
+        <button onclick="play(6)">6</button>
+        <button onclick="play(7)">7</button>
+        <button onclick="play(8)">8</button>
+        <button onclick="play(9)">9</button>
+    </div>
 </div>
-
-
-<h2 id="number"></h2>
-
-<h2 id="result"></h2>
-
-
-</div>
-
 
 <script src="script.js"></script>
 
