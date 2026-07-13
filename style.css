@@ -1,73 +1,46 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #9face6);
-    text-align: center;
-    margin: 0;
-    padding: 20px;
+let selectedColor = "";
+
+const prizes = {
+    1: "❤️ Give Mom a hug!",
+    2: "🍫 You win a chocolate!",
+    3: "☕ Make tea for your family!",
+    4: "📸 Take a family selfie!",
+    5: "🍕 Pizza treat for everyone!",
+    6: "😂 Tell a funny joke!",
+    7: "🎬 Family movie night!",
+    8: "🎁 You get a surprise gift!",
+    9: "⭐ You are the lucky winner today!"
+};
+
+
+function choose(color) {
+    selectedColor = color;
+
+    document.getElementById("numbers").style.display = "block";
+
+    document.getElementById("message").innerHTML =
+        "You selected " + color + ". Choose a number!";
 }
 
-.container {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+function result(number) {
+
+    document.getElementById("message").innerHTML =
+        "🎉 Opening Tip Top...";
+
+    setTimeout(function(){
+
+        document.getElementById("message").innerHTML =
+            prizes[number];
+
+    }, 1000);
 }
 
-h1 {
-    color: #333;
-}
 
-button {
-    border: none;
-    padding: 12px 18px;
-    margin: 8px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background: #ffcc00;
-}
+function openTip() {
 
-button:hover {
-    transform: scale(1.05);
-}
+    let tip = document.getElementById("tiptop");
 
-#tiptop {
-    width: 200px;
-    height: 200px;
-    margin: 30px auto;
-    display: flex;
-    overflow: hidden;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.8s;
-}
+    tip.classList.toggle("open");
 
-.left, .right {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    color: white;
-    font-weight: bold;
-}
-
-.left {
-    background: #ff4d4d;
-}
-
-.right {
-    background: #4d79ff;
-}
-
-.open {
-    transform: rotate(10deg) scale(1.1);
-}
-
-#message {
-    color: #e91e63;
-    margin-top: 20px;
-}
+    }
