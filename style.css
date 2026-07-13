@@ -1,67 +1,58 @@
 body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#74ebd5,#9face6);
-text-align:center;
-padding:20px;
+    font-family: Arial;
+    background:#a8edea;
+    text-align:center;
+    padding:20px;
 }
 
 
 .container{
-background:white;
-max-width:450px;
-margin:auto;
-padding:25px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    background:white;
+    max-width:400px;
+    margin:auto;
+    padding:25px;
+    border-radius:20px;
 }
 
 
-#tiptop{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-margin-top:30px;
+.game{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
 }
 
 
 .box{
-height:80px;
-border:none;
-border-radius:15px;
-font-size:30px;
-font-weight:bold;
-color:white;
-cursor:pointer;
-transition:0.3s;
-}
-
-
-.box:hover{
-transform:scale(1.1);
+    height:80px;
+    border:none;
+    border-radius:15px;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 
 .red{
-background:#ff4757;
+    background:#ff4757;
 }
 
 
 .blue{
-background:#1e90ff;
+    background:#1e90ff;
 }
 
 
 .green{
-background:#2ed573;
+    background:#2ed573;
 }
 
 
 .yellow{
-background:#ffa502;
+    background:#ffa502;
 }
 
 
 #result{
-color:#e91e63;
-margin-top:25px;
+    color:#e91e63;
 }
