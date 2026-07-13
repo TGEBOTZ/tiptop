@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Family Tip Top</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎉 Family Tip Top</h1>
+    <p>Choose a color</p>
+
+    <div class="buttons">
+        <button onclick="choose('Red')">🔴 Red</button>
+        <button onclick="choose('Blue')">🔵 Blue</button>
+        <button onclick="choose('Green')">🟢 Green</button>
+        <button onclick="choose('Yellow')">🟡 Yellow</button>
+    </div>
+
+    <div id="tiptop" onclick="openTip()">
+        <div class="left">?</div>
+        <div class="right">?</div>
+    </div>
+
+    <div id="numbers" style="display:none;">
+        <p>Choose a number</p>
+        <button onclick="result()">1</button>
+        <button onclick="result()">2</button>
+        <button onclick="result()">3</button>
+        <button onclick="result()">4</button>
+    </div>
+
+    <h2 id="message"></h2>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
