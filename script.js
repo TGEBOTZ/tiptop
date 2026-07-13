@@ -1,14 +1,14 @@
 const prizes = {
 
-1:"❤️ Give Mom a hug!",
-2:"🍫 You win a chocolate!",
-3:"☕ Make tea for your family!",
-4:"📸 Take a family selfie!",
-5:"🍕 Pizza treat for everyone!",
-6:"😂 Tell a funny joke!",
-7:"🎬 Family movie night!",
-8:"🎁 You get a surprise gift!",
-9:"⭐ You are the lucky winner today!"
+1:"💸 ₹25",
+2:"₹0 😭",
+3:"💸 #100",
+4:"💸 ₹150",
+5:"💸 ₹500 ",
+6:"💸 ₹50",
+7:"💸 ₹700",
+8:"💸 ₹660",
+9:"💸 ₹1001"
 
 };
 
